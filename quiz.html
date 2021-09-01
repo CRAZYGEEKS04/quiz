@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+
+<head>
+    <title>
+        Quiz
+    </title>
+<script>
+    var value=0;
+    function increase()
+    {
+        value++;
+        alert("Correct Answer");
+    }
+    function wrong()
+    {
+       alert("Wrong Answer");
+    }
+    function result()
+    {
+        s="YOUR SCORE IS ...."+value+"/5.";
+        document.getElementById("result").innerHTML=s;
+        value=0;
+    }
+
+
+
+    
+</script>
+<style>
+
+  body{
+    background-color: darksalmon;
+  }
+.header{
+    background-color:blanchedalmond;
+    text-align:center;
+}
+.one{
+    text-decoration: cornsilk;
+    text-transform: capitalize;
+    text-shadow: cyan;
+    text-decoration-style: double;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 50px;
+    padding-right: 5px;
+}
+.A{
+    margin-right: 30px;
+    display:inline-block;
+    text-decoration-color: tomato;
+    box-decoration-break: slice;
+    width: 150px;
+    height: 150px;
+    border-radius: 12px;
+    
+}
+.button {
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+.B{
+    margin-right: 30px;
+    display:inline-block;
+    text-decoration-color: tomato;
+    box-decoration-break: slice;
+    width: 150px;
+    height: 150px;
+    border-radius: 12px;
+}
+.button1 {
+  transition-duration: 0.4s;
+}
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.button1:hover {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+.button1:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.ans{
+    display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button2 {
+  font-size: 1em;
+  padding: 10px;
+  color: #fff;
+  border: 2px solid #06D85F;
+  border-radius: 20px/50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.button2:hover {
+  background: #06D85F;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  background-color: burlywood;
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
+}
+
+</style>
+</head>
+
+
+
+<body>
+       <div class="header">
+           <h1>Answer the quiz and See How much you know Hritik??</h1>
+       </div>
+       <div class="one">
+        <h3>1)Hritik loves playing.....</h3>
+        <button class="button A" onclick="wrong()">Indore</button><button class="button B" onclick="increase()">Outdoor</button>
+       </div>
+      
+       <div class="one">
+        <h3>2)Hritik Fav drink.....</h3>
+        <button class="button A" onclick="increase()">Juice</button><button class="button B" onclick="wrong()">Coffee</button>
+       </div>
+     
+       <div class="one">
+        <h3>3)Hritik loves doing ...</h3>
+        <button class="button A" onclick="increase()">Hug</button><button class=" button B" onclick="wrong()">Kiss</button>
+       </div>
+      
+       <div class="one">
+        <h3>4)Hritik is .....</h3>
+        <button class="button A"onclick="wrong()">Single</button><button class=" button B" onclick="increase()">Commited</button>
+       </div>
+    
+       <div class="one">
+        <h3>5)Hritik Fav Subject.....</h3>
+        <button class="button A"onclick="wrong()">English</button><button class="button B" onclick="increase()">Maths</button>
+       </div>
+     
+       <div class="one">
+           <button id="myBtn" class="button1 ans"onclick="result()"><a class="button2" href="#popup1">Result</a></button>
+           
+       </div>
+      
+
+       <div id="popup1" class="overlay">
+       <div class="popup">
+         <h1 style="text-align: center; ">Hii </h1>
+         <a class="close" href="#">&times;</a>
+         <div class="content">
+          <p id="result" style="font-family: 'Times New Roman', Times, serif; font-size: 25px;"></p>
+          <br>
+          <p  style="text-align: center;   font-family: 'Times New Roman', Times, serif; font-size: 25px;"><b>Send Screanshot to Hritik.</b></p>
+         </div>
+       </div>
+     </div>
+
+</body>
+
+
+</html>

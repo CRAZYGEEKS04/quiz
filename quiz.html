@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+
+<head>
+    <title>
+        Quiz
+    </title>
+    <script src="QUIZ.JS"></script>
+    <link rel="stylesheet" href="quiz.css">
+
+</head>
+
+
+
+<body>
+       <div class="header">
+           <h1>Answer the quiz and See How much you know Hritik??</h1>
+       </div>
+       <div class="one">
+        <h3>1)Hritik loves playing.....</h3>
+        <button class="button A" onclick="wrong()">Indore</button><button class="button B" onclick="increase()">Outdoor</button>
+       </div>
+      
+       <div class="one">
+        <h3>2)Hritik Fav drink.....</h3>
+        <button class="button A" onclick="increase()">Juice</button><button class="button B" onclick="wrong()">Coffee</button>
+       </div>
+     
+       <div class="one">
+        <h3>3)Hritik loves doing ...</h3>
+        <button class="button A" onclick="increase()">Hug</button><button class=" button B" onclick="wrong()">Kiss</button>
+       </div>
+      
+       <div class="one">
+        <h3>4)Hritik is .....</h3>
+        <button class="button A"onclick="wrong()">Single</button><button class=" button B" onclick="increase()">Commited</button>
+       </div>
+    
+       <div class="one">
+        <h3>5)Hritik Fav Subject.....</h3>
+        <button class="button A"onclick="wrong()">English</button><button class="button B" onclick="increase()">Maths</button>
+       </div>
+     
+       <div class="one">
+           <button id="myBtn" class="button1 ans"onclick="result()"><a class="button2" href="#popup1">Result</a></button>
+           
+       </div>
+      
+
+       <div id="popup1" class="overlay">
+       <div class="popup">
+         <h1 style="text-align: center; ">Hii </h1>
+         <a class="close" href="#">&times;</a>
+         <div class="content">
+          <p id="result" style="font-family: 'Times New Roman', Times, serif; font-size: 25px;"></p>
+          <br>
+          <p  style="text-align: center;   font-family: 'Times New Roman', Times, serif; font-size: 25px;"><b>Send Screanshot to Hritik.</b></p>
+         </div>
+       </div>
+     </div>
+
+</body>
+
+
+</html>
